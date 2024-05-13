@@ -4,6 +4,10 @@ tags: []
 
 ---
 
+### Prerequisites:
+- You have [Created an SAP BTP ABAP Environment](https://developers.sap.com/tutorials/abap-environment-trial-onboarding.html) 
+You have downloaded and installed the latest [ABAP Development Tools (ADT)](https://developers.sap.com/tutorials/abap-install-adt.html).
+
 Navigate to app: Maintain Communication Users and create a new user with username + password (used for accessing the print queue)
 Navigate to app: Communication Systems
 Create a new communication system (to connect to Forms Service by Adobe service instance)
