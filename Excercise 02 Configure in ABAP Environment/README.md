@@ -1,8 +1,3 @@
----
-noteId: "314714100b6c11ef88964ff9e42a747e"
-tags: []
-
----
 
 ### Prerequisites:
 - You have [Created an SAP BTP ABAP Environment](https://developers.sap.com/tutorials/abap-environment-trial-onboarding.html) 

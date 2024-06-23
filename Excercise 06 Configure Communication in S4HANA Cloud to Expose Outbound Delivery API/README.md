@@ -1,8 +1,4 @@
----
-noteId: "d0c22af00ba511ef88964ff9e42a747e"
-tags: []
 
----
 
 ### Step 1, Create communication user
 ![alt text](image-1.png)

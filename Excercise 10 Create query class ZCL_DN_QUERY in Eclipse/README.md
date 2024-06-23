@@ -1,8 +1,4 @@
----
-noteId: "72adf0000d1911ef88964ff9e42a747e"
-tags: []
 
----
 
 Create query class ZCL_DN_QUERY in Eclipse
 if_rap_query_provider

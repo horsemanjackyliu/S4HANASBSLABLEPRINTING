@@ -1,8 +1,4 @@
----
-noteId: "652748100d2c11ef88964ff9e42a747e"
-tags: []
 
----
 ## Create behavior definition for data definition ZOBJ_DN in Eclipse.
 
 ### Step 1, Create abstract entity for render function  input parameters

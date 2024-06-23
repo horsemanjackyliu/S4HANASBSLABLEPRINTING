@@ -1,8 +1,4 @@
----
-noteId: "f08e9b700b7d11ef88964ff9e42a747e"
-tags: []
 
----
 
 ### step 1:Create  Custom Entity for Outbound Delivery Header
 ![alt text](image.png)

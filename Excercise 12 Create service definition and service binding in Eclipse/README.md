@@ -1,8 +1,4 @@
----
-noteId: "08417f800d3611ef88964ff9e42a747e"
-tags: []
 
----
 
 ### Step 1,Create service definition in Eclipse
 

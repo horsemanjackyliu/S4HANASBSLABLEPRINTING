@@ -1,8 +1,4 @@
----
-noteId: "12cd41700b7711ef88964ff9e42a747e"
-tags: []
 
----
 ## Create new instance and service key for service: Destination
 
 ![alt text](image.png)

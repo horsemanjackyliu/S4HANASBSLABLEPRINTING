@@ -1,8 +1,4 @@
----
-noteId: "5249c0100d0411ef88964ff9e42a747e"
-tags: []
 
----
 
 Create Outbound Service in Eclipse
 ![alt text](image.png)
