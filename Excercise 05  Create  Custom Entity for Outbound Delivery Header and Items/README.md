@@ -1,6 +1,7 @@
 
 
-### step 1:Create  Custom Entity for Outbound Delivery Header
+### 1. Create  Custom Entity for Outbound Delivery Header in Eclipse ADT
+
 ![alt text](image.png)
 ![alt text](image-1.png)
 ![alt text](image-2.png)
@@ -9,7 +10,7 @@
 ![alt text](image-5.png)
 
 
-Adjust the data definition ZOBJ_DN with the following code:
+Adjust the data definition ZOBJ_DN as the following code:
 
 
 ```
@@ -195,7 +196,7 @@ define root custom entity ZOBJ_DN
 
 push **command+s** and **command+f3** to save and activate the code .
 
-### step 2:Create  Custom Entity for Outbound Delivery items
+### 2. Create  Custom Entity for Outbound Delivery items in Eclipse Adt
 
 ![alt text](image.png)
 ![alt text](image-1.png)

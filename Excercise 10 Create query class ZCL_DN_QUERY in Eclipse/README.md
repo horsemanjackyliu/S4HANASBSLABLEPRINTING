@@ -1,14 +1,11 @@
-
-
-Create query class ZCL_DN_QUERY in Eclipse
-if_rap_query_provider
+### 1. Create query class ZCL_DN_QUERY in Eclipse
 
 ![alt text](image.png)
 ![alt text](image-1.png)
 ![alt text](image-3.png)
 ![alt text](image-2.png)
 
-update the code of class ZCL_DN_QUERY  as the following:
+### 2. Adjust the code of class ZCL_DN_QUERY  like the following:
 
 ```
 CLASS zcl_dn_query DEFINITION
@@ -192,5 +189,6 @@ ENDCLASS.
 ```
 
 Activate the class.
+
 ![alt text](image-4.png)
 

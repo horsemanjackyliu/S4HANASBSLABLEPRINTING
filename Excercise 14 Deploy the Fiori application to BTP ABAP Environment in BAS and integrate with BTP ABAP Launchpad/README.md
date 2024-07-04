@@ -1,26 +1,32 @@
 
-### Step 1,Deploy the fiori application to BTP ABAP Environment in BAS
+### 1. Deploy the Fiori application to SAP BTP ABAP Environment in BAS
+
 ![alt text](image.png)
 ![alt text](image-1.png)
-### Step 2,Check the deployed fiori application in Eclipse
+
+### 2. Check the deployed Fiori application in Eclipse Adt
+
 ![alt text](image-3.png)
-### Step 3,Create IAM App
-In Eclipse right-click your package ZZLABELPRINT and select New > Other Repository Object.
+
+### 3,Create IAM App in Eclipse Adt
+In Eclipse right-click your package ZLABELPRINT and select New > Other Repository Object.
+
 ![alt text](image-10.png)
 ![alt text](image-4.png)
 ![alt text](image-5.png)
 
 - Name: ZLABELPRINTING_IAM_APP
 - Description: Label Printing IAM APP 
-- Click Next.
+- Click **Next**.
+
 ![alt text](image-6.png)
 ![alt text](image-7.png)
 ![alt text](image-8.png)
 ![alt text](image-9.png)
 
-### Step 4: Create business catalog
+### 4. Create business catalog in Eclipse Adt
 
-In Eclipse right-click your package ZZLABELPRINT and select New > Other Repository Object.
+In Eclipse right-click your package ZLABELPRINT and select New > Other Repository Object.
 
 ![alt text](image-10.png)
 ![alt text](image-11.png)
@@ -29,6 +35,7 @@ In Eclipse right-click your package ZZLABELPRINT and select New > Other Reposito
 
 - Name: ZLABELPRINT_BC2
 - Description: Label Printing Businessf Catalog
+
 ![alt text](image-13.png)
 ![alt text](image-14.png)
 ![alt text](image-15.png)
@@ -38,7 +45,8 @@ In Eclipse right-click your package ZZLABELPRINT and select New > Other Reposito
 ![alt text](image-25.png)
 
 
-### Step 5: Create business role in BTP ABAP Environment.
+### 5. Create business role in SAP BTP ABAP Environment.
+
 ![alt text](image-19.png)
 ![alt text](image-20.png)
 ![alt text](image-21.png)
@@ -55,9 +63,10 @@ In Eclipse right-click your package ZZLABELPRINT and select New > Other Reposito
 ![alt text](image-29.png)
 
 
-### Step 6:Create transport request or use default transport request
+### 6. Create transport request or use default transport request in SAP BTP ABAP Environment.
 
 Log in to your system and select the Export Customizing Transports tile
+
 ![alt text](image-32.png)
 ![alt text](image-30.png)
 ![alt text](image-31.png)
@@ -68,6 +77,7 @@ Create new transport request:
 
 - Description: Transport_Request_LabelPrint
 - Type: Customizing Request
+
 ![alt text](image-34.png)
 ![alt text](image-35.png)
 
@@ -75,11 +85,15 @@ If the Transport Category is not default, click **change Category** to change it
 
 ![alt text](image-36.png)
 
-## Step 7: Create Launchpad Space.
+## 7. Create Launchpad Space in SAP BTP ABAP Environment.
+
 ![alt text](image-37.png)
+
 Select the Manage Launchpad Spaces tile.
+
 ![alt text](image-38.png)
 ![alt text](image-39.png)
+
 Create new space and page:
 
 - Space ID: ZLABELPRINT_SPACE 
@@ -89,6 +103,7 @@ Create new space and page:
 - Page description: Page for label printing
 - Page title:  Page for label printing
 - Transport: H02K900059 (user your own cts)
+
 ![alt text](image-40.png)
 ![alt text](image-41.png)
 ![alt text](image-42.png)
@@ -100,7 +115,8 @@ Create new space and page:
 ![alt text](image-48.png)
 ![alt text](image-49.png)
 
-## Step 8: Run the application
+## 8. Run the application  in SAP BTP ABAP Environment.
+
 ![alt text](image-50.png)
 ![alt text](image-51.png)
 ![alt text](image-52.png)

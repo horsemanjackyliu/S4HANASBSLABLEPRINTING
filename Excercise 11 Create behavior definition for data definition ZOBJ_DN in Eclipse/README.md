@@ -3,7 +3,6 @@
 
 ### Step 1, Create abstract entity for render function  input parameters
 
-zrenderparam
 
 ![alt text](image.png)
 ![alt text](image-1.png)
@@ -12,7 +11,7 @@ zrenderparam
 ![alt text](image-4.png)
 ![alt text](image-5.png)
 
-update the abstract entity zrenderparam with the following code:
+Update the abstract entity zrenderparam with the following code:
 
 ```
 @EndUserText.label: 'zrenderparam'
@@ -39,7 +38,7 @@ Activate the abstract entity zrenderparam
 ![alt text](image-4.png)
 ![alt text](image-7.png)
 
-update the abstract entity zpdf_cnt with the following code:
+Adjust the abstract entity zpdf_cnt with the following code:
 
 ```
 @EndUserText.label: 'zpdf_cnt'
@@ -50,16 +49,18 @@ define abstract entity zpdf_cnt
 }
 ```
 Activate the abstract entity zpdf_cnt
+
 ![alt text](image-9.png)
 
 ### Step 3, Create behavior definition for data definition ZOBJ_DN
 ![alt text](image-10.png)
 ![alt text](image-11.png)
+
 Click Next until finish.
 
 ![alt text](image-12.png)
 
-Adjust the behavior definition as the following:
+Adjust the behavior definition like the following code:
 
 ```
 unmanaged implementation in class zbp_obj_dn unique;

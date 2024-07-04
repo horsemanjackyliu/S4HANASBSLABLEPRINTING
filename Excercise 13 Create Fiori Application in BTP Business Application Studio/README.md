@@ -8,10 +8,11 @@
 - [Create a Dev Space for SAP Fiori Apps](https://developers.sap.com/tutorials/appstudio-devspace-fiori-create.html)
 
 
-### Step 1, Login into cloud foundry in BAS.
+### 1. Login into SAP BTP cloud foundry in BAS.
 
 ![alt text](image-6.png)
-get API endpoint of cloud foundry in BTP Subaccount which include the BTP ABAP Environment.
+
+Get API endpoint of cloud foundry in BTP Subaccount which include the BTP ABAP Environment.
 ![alt text](image-5.png)
 ![alt text](image-7.png)
 ![alt text](image-8.png)
@@ -19,7 +20,7 @@ get API endpoint of cloud foundry in BTP Subaccount which include the BTP ABAP E
 ![alt text](image-10.png)
 ![alt text](image-11.png)
 
-### Step 2, Create new fiori project with from template in BAS.
+### 2. Create new Fiori project with from template in BAS.
 ![alt text](image-1.png)
 ![alt text](image-2.png)
 ![alt text](image-3.png)
@@ -30,7 +31,7 @@ get API endpoint of cloud foundry in BTP Subaccount which include the BTP ABAP E
 ![alt text](image-15.png)
 ![alt text](image-16.png)
 
-### Step 3, Adjust the fiori project to add controller extension in BAS.
+### 3. Adjust the Fiori project to add controller extension in BAS.
 
 ![alt text](image-17.png)
 ![alt text](image-18.png)
@@ -38,12 +39,14 @@ get API endpoint of cloud foundry in BTP Subaccount which include the BTP ABAP E
 ![alt text](image-20.png)
 
 ![alt text](image-21.png)
+
 Input the controller name  **DnitemController**
+
 ![alt text](image-22.png)
 
 ![alt text](image-23.png)
 
-Update the controller's code as the following:
+Update the controller's code like the following:
 
 
 ```
@@ -131,13 +134,14 @@ var filename = dn+dnItem ;
 });
 ```
 
-### Step 4, Adjust the fiori project to add customer fragment and Custom Action in BAS.
+### 4. Adjust the Fiori project to add customer fragment and Custom Action in BAS.
+
 ![alt text](image-24.png)
 ![alt text](image-25.png)
 ![alt text](image-26.png)
 ![alt text](image-27.png)
 
-Update the fragment code as the following:
+Update the fragment code like the following:
 
 ```
 <core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:macros="sap.fe.macros">
@@ -160,10 +164,12 @@ Update the fragment code as the following:
 ![alt text](image-29.png)
 ![alt text](image-30.png)
 
-### Step 5, Adjust the fiori project to Flexible Column Layout in BAS.
+### 5. Adjust the Fiori project to Flexible Column Layout in BAS.
+
 ![alt text](image-28.png)
 
-### Step 6, Preview the applicaton in BAS.
+### 6. Preview the application in BAS.
+
 ![alt text](image-32.png)
 ![alt text](image-33.png)
 ![alt text](image-34.png)

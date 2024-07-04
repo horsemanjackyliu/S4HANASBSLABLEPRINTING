@@ -3,7 +3,7 @@
 
 _ You have [installed Eclipse and ADT](https://developers.sap.com/tutorials/abap-install-adt.html)
 
-### Create Package under Package ZLOCAL
+### 1. Create Package under Package ZLOCAL in Eclipse ADT.
 
 ![alt text](image-4.png)
 ![alt text](image-1.png)
