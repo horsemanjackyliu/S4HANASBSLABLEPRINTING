@@ -22,7 +22,7 @@ This user will be stored in the Communication System and used to authenticate ou
 
 In the **SAP BTP Cockpit**, navigate to **Services → Instances and Subscriptions**, find your ABAP Environment instance, and open its Fiori Launchpad.
 
-![BTP Cockpit — Instances and Subscriptions, open ABAP instance](image.png)
+![BTP Cockpit — Instances and Subscriptions, open ABAP instance](img/image.png)
 
 ---
 
@@ -30,7 +30,7 @@ In the **SAP BTP Cockpit**, navigate to **Services → Instances and Subscriptio
 
 In the Fiori Launchpad search bar, type `comm` and select **Maintain Communication Users**.
 
-![Search for Maintain Communication Users](image-1.png)
+![Search for Maintain Communication Users](img/image-1.png)
 
 ---
 
@@ -38,11 +38,11 @@ In the Fiori Launchpad search bar, type `comm` and select **Maintain Communicati
 
 On the **Maintain Communication Users** list page, click **New**.
 
-![Maintain Communication Users list — click New](image-4.png)
+![Maintain Communication Users list — click New](img/image-4.png)
 
 Fill in the form as follows, then click **Propose Password** to generate a password. Note the password — you will enter it in the Communication System in Step 6. Click **Save**.
 
-![New communication user BTPPRINT](image-10.png)
+![New communication user BTPPRINT](img/image-10.png)
 
 | Field | Value |
 |-------|-------|
@@ -62,7 +62,7 @@ The Communication System represents your S/4HANA Cloud system from the BTP ABAP 
 
 In the Fiori Launchpad search bar, type `comm` and select **Communication Systems**.
 
-![Search for Communication Systems](image-2.png)
+![Search for Communication Systems](img/image-2.png)
 
 ---
 
@@ -70,7 +70,7 @@ In the Fiori Launchpad search bar, type `comm` and select **Communication System
 
 On the **Communication Systems** list page, click **New**.
 
-![Communication Systems list — click New](image-6.png)
+![Communication Systems list — click New](img/image-6.png)
 
 ---
 
@@ -78,7 +78,7 @@ On the **Communication Systems** list page, click **New**.
 
 Fill in the **General Data** section. The host name comes from your S/4HANA Cloud system URL.
 
-![New Communication System S4HC_O5P — general data](image-7.png)
+![New Communication System S4HC_O5P — general data](img/image-7.png)
 
 | Field | Value |
 |-------|-------|
@@ -96,7 +96,7 @@ Fill in the **General Data** section. The host name comes from your S/4HANA Clou
 
 Scroll down to the **Users for Inbound Communication** section, click **+**, and add the communication user you created in Part 1. In the **New Outbound User** dialog, enter the S/4HANA communication user credentials from Exercise 06.
 
-![Add inbound user BTPPRINT with User ID and Password](image-9.png)
+![Add inbound user BTPPRINT with User ID and Password](img/image-9.png)
 
 | Field | Value |
 |-------|-------|
@@ -106,7 +106,7 @@ Scroll down to the **Users for Inbound Communication** section, click **+**, and
 
 After saving the dialog, the **Users for Inbound Communication** section should show `BTPPRINT` with Authentication Method `User ID and Password`.
 
-![Inbound user BTPPRINT confirmed](image-8.png)
+![Inbound user BTPPRINT confirmed](img/image-8.png)
 
 Click **Save**.
 
@@ -120,7 +120,7 @@ The Communication Arrangement binds the custom communication scenario `ZCOMMU_SC
 
 In the Fiori Launchpad search bar, type `comm` and select **Communication Arrangements**.
 
-![Search for Communication Arrangements](image-3.png)
+![Search for Communication Arrangements](img/image-3.png)
 
 ---
 
@@ -128,7 +128,7 @@ In the Fiori Launchpad search bar, type `comm` and select **Communication Arrang
 
 On the **Communication Arrangements** list page, click **New**.
 
-![Communication Arrangements list — click New](image-11.png)
+![Communication Arrangements list — click New](img/image-11.png)
 
 ---
 
@@ -136,7 +136,7 @@ On the **Communication Arrangements** list page, click **New**.
 
 Fill in the form as follows:
 
-![Communication Arrangement ZCOMMU_SCEN_O5P details](image-12.png)
+![Communication Arrangement ZCOMMU_SCEN_O5P details](img/image-12.png)
 
 | Field | Value |
 |-------|-------|

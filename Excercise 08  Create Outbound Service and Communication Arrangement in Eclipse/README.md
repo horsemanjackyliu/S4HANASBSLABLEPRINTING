@@ -13,11 +13,11 @@ In this exercise you will create two ABAP objects in Eclipse ADT that together d
 
 In the **Project Explorer**, right-click your package and choose **New → Other ABAP Repository Object**.
 
-![Right-click package to open New ABAP Repository Object wizard](image.png)
+![Right-click package to open New ABAP Repository Object wizard](img/image.png)
 
 In the search box, type `out` to filter the list. Under **Cloud Communication Management**, select **Outbound Service** and click **Next**.
 
-![Select Outbound Service](image-1.png)
+![Select Outbound Service](img/image-1.png)
 
 ---
 
@@ -25,7 +25,7 @@ In the search box, type `out` to filter the list. Under **Cloud Communication Ma
 
 Fill in the wizard fields as follows, then click **Next**.
 
-![Outbound Service details](image-2.png)
+![Outbound Service details](img/image-2.png)
 
 | Field | Value |
 |-------|-------|
@@ -40,7 +40,7 @@ Fill in the wizard fields as follows, then click **Next**.
 
 Choose the transport request associated with your label printing package (`ZLABELPRINT_PACKAGE`), then click **Finish**.
 
-![Select transport request for Outbound Service](image-3.png)
+![Select transport request for Outbound Service](img/image-3.png)
 
 ---
 
@@ -48,7 +48,7 @@ Choose the transport request associated with your label printing package (`ZLABE
 
 The Outbound Service `ZOBT_SRV_O5P_REST` is created and appears under **Cloud Communication Management** in the Project Explorer.
 
-![Outbound Service created successfully](image-4.png)
+![Outbound Service created successfully](img/image-4.png)
 
 ---
 
@@ -60,7 +60,7 @@ Right-click your package and choose **New → Other ABAP Repository Object**.
 
 In the search box, type `comm` to filter the list. Under **Cloud Communication Management**, select **Communication Scenario** and click **Next**.
 
-![Select Communication Scenario](image-5.png)
+![Select Communication Scenario](img/image-5.png)
 
 ---
 
@@ -68,7 +68,7 @@ In the search box, type `comm` to filter the list. Under **Cloud Communication M
 
 Fill in the wizard fields as follows, then click **Next**.
 
-![Communication Scenario details](image-6.png)
+![Communication Scenario details](img/image-6.png)
 
 | Field | Value |
 |-------|-------|
@@ -82,7 +82,7 @@ Fill in the wizard fields as follows, then click **Next**.
 
 Choose the same `ZLABELPRINT_PACKAGE` transport request and click **Finish**.
 
-![Select transport request for Communication Scenario](image-7.png)
+![Select transport request for Communication Scenario](img/image-7.png)
 
 ---
 
@@ -92,7 +92,7 @@ The Communication Scenario editor opens. In the **Outbound Services** section, c
 
 Confirm that the entry appears in the **Outbound Services** table with Service Type `HTTP Service`.
 
-![Outbound Service added to Communication Scenario](image-8.png)
+![Outbound Service added to Communication Scenario](img/image-8.png)
 
 | Field | Value |
 |-------|-------|
@@ -105,7 +105,7 @@ Confirm that the entry appears in the **Outbound Services** table with Service T
 
 Right-click `ZCOMMU_SCEN_O5P` in the Project Explorer and choose **Activate** (`Cmd+F3`).
 
-![Activate the Communication Scenario](image-9.png)
+![Activate the Communication Scenario](img/image-9.png)
 
 Confirm that the status indicator in the editor changes to active (no pending changes marker).
 

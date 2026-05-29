@@ -19,7 +19,7 @@ In the **SAP BTP Cockpit**, navigate to your subaccount and go to **Services →
 
 In the **New Instance or Subscription** dialog, fill in the fields as follows and click **Create**.
 
-![Create new Destination Service instance](image.png)
+![Create new Destination Service instance](img/image.png)
 
 | Field | Value |
 |-------|-------|
@@ -34,11 +34,11 @@ In the **New Instance or Subscription** dialog, fill in the fields as follows an
 
 Once the instance is created, select it from the **Instances** list. In the detail panel on the right, go to the **Service Keys** tab and click **Create**.
 
-![Select instance and open Service Keys tab](image-1.png)
+![Select instance and open Service Keys tab](img/image-1.png)
 
 In the **New Service Key** dialog, enter a name (e.g. `destinationkey`) and click **Create**. Leave the binding parameters empty.
 
-![Create service key](image-2.png)
+![Create service key](img/image-2.png)
 
 ---
 
@@ -46,7 +46,7 @@ In the **New Service Key** dialog, enter a name (e.g. `destinationkey`) and clic
 
 After the key is created, click on it to view the **Credentials** panel. You will need the following values in Part 2:
 
-![Service key credentials](image-3.png)
+![Service key credentials](img/image-3.png)
 
 | Key | Where used |
 |-----|-----------|
@@ -65,7 +65,7 @@ Copy or download the credentials and keep them available for the next steps.
 
 In the BTP Cockpit, navigate to **Services → Instances and Subscriptions**, find your **ABAP Environment** instance and click on it to open the Fiori Launchpad.
 
-![Open BTP ABAP Environment instance](image-8.png)
+![Open BTP ABAP Environment instance](img/image-8.png)
 
 ---
 
@@ -73,15 +73,15 @@ In the BTP Cockpit, navigate to **Services → Instances and Subscriptions**, fi
 
 In the Fiori Launchpad search bar, type `commu` and select **Communication Systems**.
 
-![Search for Communication Systems](image-7.png)
+![Search for Communication Systems](img/image-7.png)
 
 On the **Communication Systems** list page, click **New**.
 
-![Communication Systems list — click New](image-6.png)
+![Communication Systems list — click New](img/image-6.png)
 
 In the new Communication System form, fill in the fields using values from the Destination Service service key:
 
-![Communication System details](image-4.png)
+![Communication System details](img/image-4.png)
 
 | Field | Value |
 |-------|-------|
@@ -94,7 +94,7 @@ In the new Communication System form, fill in the fields using values from the D
 
 Then scroll down to **Users for Outbound Communication**, click **+** and add an OAuth 2.0 user:
 
-![Add outbound communication user and save](image-5.png)
+![Add outbound communication user and save](img/image-5.png)
 
 | Field | Value |
 |-------|-------|
@@ -110,15 +110,15 @@ Click **Save**.
 
 In the Fiori Launchpad search bar, type `commu` and select **Communication Arrangements**.
 
-![Search for Communication Arrangements](image-9.png)
+![Search for Communication Arrangements](img/image-9.png)
 
 On the **Communication Arrangements** list page, click **New**.
 
-![Communication Arrangements list — click New](image-10.png)
+![Communication Arrangements list — click New](img/image-10.png)
 
 In the new arrangement form, fill in the fields as follows:
 
-![Communication Arrangement SAP_COM_0276 details](image-11.png)
+![Communication Arrangement SAP_COM_0276 details](img/image-11.png)
 
 | Field | Value |
 |-------|-------|

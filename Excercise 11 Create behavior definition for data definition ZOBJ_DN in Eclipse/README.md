@@ -20,7 +20,7 @@ The exercise has three parts:
 
 In the **Project Explorer**, right-click the package `ZLABELPRINT` and choose **New → Other ABAP Repository Objects**.
 
-![Right-click ZLABELPRINT → New → Other ABAP Repository Objects](image.png)
+![Right-click ZLABELPRINT → New → Other ABAP Repository Objects](img/image.png)
 
 ---
 
@@ -28,7 +28,7 @@ In the **Project Explorer**, right-click the package `ZLABELPRINT` and choose **
 
 In the search box type `data def`, select **Data Definition** under **Core Data Services**, and click **Next**.
 
-![Select Data Definition and click Next](image-1.png)
+![Select Data Definition and click Next](img/image-1.png)
 
 ---
 
@@ -36,7 +36,7 @@ In the search box type `data def`, select **Data Definition** under **Core Data 
 
 Fill in the fields as follows and click **Next**.
 
-![New Data Definition — name zrenderparam](image-2.png)
+![New Data Definition — name zrenderparam](img/image-2.png)
 
 | Field | Value |
 |-------|-------|
@@ -50,7 +50,7 @@ Fill in the fields as follows and click **Next**.
 
 Select the `ZLABELPRINT_PACKAGE` transport request and click **Next**.
 
-![Select ZLABELPRINT_PACKAGE transport request](image-3.png)
+![Select ZLABELPRINT_PACKAGE transport request](img/image-3.png)
 
 ---
 
@@ -58,7 +58,7 @@ Select the `ZLABELPRINT_PACKAGE` transport request and click **Next**.
 
 On the **Templates** page, select **Define Abstract Entity with Parameters** and click **Finish**.
 
-![Select Define Abstract Entity with Parameters](image-4.png)
+![Select Define Abstract Entity with Parameters](img/image-4.png)
 
 ---
 
@@ -66,7 +66,7 @@ On the **Templates** page, select **Define Abstract Entity with Parameters** and
 
 Replace the generated content with the following, then save (`Cmd+S`) and activate (`Cmd+F3`).
 
-![ZRENDERPARAM open in Eclipse editor](image-5.png)
+![ZRENDERPARAM open in Eclipse editor](img/image-5.png)
 
 ```cds
 @EndUserText.label: 'zrenderparam'
@@ -89,7 +89,7 @@ define abstract entity zrenderparam
 
 Repeat Steps 1–5 with the following name, again selecting the **Define Abstract Entity with Parameters** template.
 
-![New Data Definition — name zpdf_cnt](image-6.png)
+![New Data Definition — name zpdf_cnt](img/image-6.png)
 
 | Field | Value |
 |-------|-------|
@@ -103,7 +103,7 @@ Repeat Steps 1–5 with the following name, again selecting the **Define Abstrac
 
 Replace the generated content with the following, then save and activate.
 
-![ZPDF_CNT open in Eclipse editor](image-7.png)
+![ZPDF_CNT open in Eclipse editor](img/image-7.png)
 
 ```cds
 @EndUserText.label: 'zpdf_cnt'
@@ -122,7 +122,7 @@ define abstract entity zpdf_cnt
 
 In the **Project Explorer**, right-click `ZOBJ_DN` under **Core Data Services → Data Definitions** and choose **New → New Behavior Definition**.
 
-![Right-click ZOBJ_DN → New → New Behavior Definition](image-10.png)
+![Right-click ZOBJ_DN → New → New Behavior Definition](img/image-10.png)
 
 ---
 
@@ -130,7 +130,7 @@ In the **Project Explorer**, right-click `ZOBJ_DN` under **Core Data Services �
 
 The wizard pre-fills **Root Entity** with `ZOBJ_DN`. Set the **Implementation Type** to `Unmanaged` and click **Next**, then proceed through the transport request page and click **Finish**.
 
-![New Behavior Definition — ZOBJ_DN, Unmanaged](image-11.png)
+![New Behavior Definition — ZOBJ_DN, Unmanaged](img/image-11.png)
 
 | Field | Value |
 |-------|-------|
@@ -146,7 +146,7 @@ The wizard pre-fills **Root Entity** with `ZOBJ_DN`. Set the **Implementation Ty
 
 Eclipse opens the behavior definition editor with a skeleton. Replace it with the following, then save.
 
-![Behavior definition ZOBJ_DN with render function](image-12.png)
+![Behavior definition ZOBJ_DN with render function](img/image-12.png)
 
 ```abap
 unmanaged implementation in class zbp_obj_dn unique;
@@ -185,7 +185,7 @@ define behavior for ZOBJ_DN_ITEMS //alias <alias_name>
 
 Eclipse also opens the behavior implementation class `ZBP_OBJ_DN`. Replace its entire content with the following, then save.
 
-![ZBP_OBJ_DN implementation with render method](image-13.png)
+![ZBP_OBJ_DN implementation with render method](img/image-13.png)
 
 ```abap
 CLASS lhc_ZOBJ_DN DEFINITION INHERITING FROM cl_abap_behavior_handler.
@@ -356,9 +356,9 @@ ENDCLASS.
 
 Right-click `ZOBJ_DN` in the Project Explorer and choose **Activate**, or press `Cmd+F3`. Eclipse will prompt you to save both `ZBP_OBJ_DN` and `ZOBJ_DN` before activating — make sure both are checked and click **OK**.
 
-![Activate — right-click ZOBJ_DN](image-14.png)
+![Activate — right-click ZOBJ_DN](img/image-14.png)
 
-![Save before activation — select both ZBP_OBJ_DN and ZOBJ_DN](image-15.png)
+![Save before activation — select both ZBP_OBJ_DN and ZOBJ_DN](img/image-15.png)
 
 Both objects must activate without errors before you proceed.
 

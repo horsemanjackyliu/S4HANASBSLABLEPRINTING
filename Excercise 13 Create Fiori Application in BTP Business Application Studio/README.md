@@ -11,7 +11,7 @@ Before starting, confirm the following are in place:
 - SAP Business Application Studio is set up in the same BTP subaccount as your ABAP Environment. Follow the [SAP BAS onboarding tutorial](https://developers.sap.com/tutorials/appstudio-onboarding.html) if needed.
 - Your user has the following BAS roles assigned in the BTP subaccount (**Security → Roles**):
 
-  ![BAS roles assigned in BTP subaccount](image.png)
+  ![BAS roles assigned in BTP subaccount](img/image.png)
 
   | Role Template | Role Name |
   |---------------|-----------|
@@ -31,7 +31,7 @@ BAS needs a Cloud Foundry target to discover the ABAP Environment service and it
 
 In the **SAP BTP Cockpit**, open your subaccount **Overview** page. Under **Cloud Foundry Environment**, copy the **API Endpoint** URL (e.g. `https://api.cf.eu10.hana.ondemand.com`).
 
-![BTP subaccount overview — copy the CF API Endpoint](image-6.png)
+![BTP subaccount overview — copy the CF API Endpoint](img/image-6.png)
 
 ---
 
@@ -39,7 +39,7 @@ In the **SAP BTP Cockpit**, open your subaccount **Overview** page. Under **Clou
 
 In BAS, click the **Cloud Foundry** icon in the left activity bar (satellite dish icon). In the **Cloud Foundry: Targets** panel header, click the **+** icon to add a new target.
 
-![Cloud Foundry Targets panel — click + to add target](image-5.png)
+![Cloud Foundry Targets panel — click + to add target](img/image-5.png)
 
 ---
 
@@ -47,7 +47,7 @@ In BAS, click the **Cloud Foundry** icon in the left activity bar (satellite dis
 
 The **Cloud Foundry Sign In** form opens. Enter the API endpoint you copied in Step 1, enter your BTP username and password, and click **Sign in**.
 
-![Cloud Foundry Sign In — enter endpoint and credentials](image-7.png)
+![Cloud Foundry Sign In — enter endpoint and credentials](img/image-7.png)
 
 ---
 
@@ -55,7 +55,7 @@ The **Cloud Foundry Sign In** form opens. Enter the API endpoint you copied in S
 
 When prompted for a target name, type `ABAPAPJ` (or any descriptive name) and press **Enter**.
 
-![Enter a name for the Cloud Foundry target](image-8.png)
+![Enter a name for the Cloud Foundry target](img/image-8.png)
 
 ---
 
@@ -63,7 +63,7 @@ When prompted for a target name, type `ABAPAPJ` (or any descriptive name) and pr
 
 After sign-in, the form shows the **Cloud Foundry Target** section. Select your organization (e.g. `APJEXTABAPORG`) and space (e.g. `dev`), then click **Apply**.
 
-![Select CF organization and space, click Apply](image-9.png)
+![Select CF organization and space, click Apply](img/image-9.png)
 
 ---
 
@@ -71,11 +71,11 @@ After sign-in, the form shows the **Cloud Foundry Target** section. Select your 
 
 The **Cloud Foundry: Targets** panel should now show your target as **Active Target** with a list of services. The ABAP Environment service will appear in the list.
 
-![Cloud Foundry Targets — active target with services listed](image-10.png)
+![Cloud Foundry Targets — active target with services listed](img/image-10.png)
 
 > If you see **Login required** next to a service, click the login icon beside it to authenticate against that specific service instance.
 
-![Login required — click the login icon](image-11.png)
+![Login required — click the login icon](img/image-11.png)
 
 ---
 
@@ -85,7 +85,7 @@ The **Cloud Foundry: Targets** panel should now show your target as **Active Tar
 
 In BAS, go to **File → Open Folder** and navigate to `/home/user/projects`. Click **OK**.
 
-![File → Open Folder → /home/user/projects](image-1.png)
+![File → Open Folder → /home/user/projects](img/image-1.png)
 
 ---
 
@@ -93,7 +93,7 @@ In BAS, go to **File → Open Folder** and navigate to `/home/user/projects`. Cl
 
 On the **Get Started** page, click **New Project from Template**.
 
-![Get Started — click New Project from Template](image-2.png)
+![Get Started — click New Project from Template](img/image-2.png)
 
 ---
 
@@ -101,7 +101,7 @@ On the **Get Started** page, click **New Project from Template**.
 
 On the **Select Template and Target Location** page, select **SAP Fiori application** and click **Start**.
 
-![Select SAP Fiori application template](image-3.png)
+![Select SAP Fiori application template](img/image-3.png)
 
 ---
 
@@ -109,7 +109,7 @@ On the **Select Template and Target Location** page, select **SAP Fiori applicat
 
 On the **Template Selection** page, select **List Report Page** and click **Next**.
 
-![Select List Report Page floorplan](image-4.png)
+![Select List Report Page floorplan](img/image-4.png)
 
 ---
 
@@ -117,7 +117,7 @@ On the **Template Selection** page, select **List Report Page** and click **Next
 
 On the **Data Source and Service Selection** page, fill in the fields as follows and click **Next**.
 
-![Data Source and Service Selection](image-12.png)
+![Data Source and Service Selection](img/image-12.png)
 
 | Field | Value |
 |-------|-------|
@@ -132,7 +132,7 @@ On the **Data Source and Service Selection** page, fill in the fields as follows
 
 On the **Entity Selection** page, fill in the fields as follows and click **Next**.
 
-![Entity Selection — ZOBJ_DN with _items navigation](image-13.png)
+![Entity Selection — ZOBJ_DN with _items navigation](img/image-13.png)
 
 | Field | Value |
 |-------|-------|
@@ -147,7 +147,7 @@ On the **Entity Selection** page, fill in the fields as follows and click **Next
 
 On the **Project Attributes** page, fill in the fields as follows and click **Next**.
 
-![Project Attributes — module name zlabelprint](image-14.png)
+![Project Attributes — module name zlabelprint](img/image-14.png)
 
 | Field | Value |
 |-------|-------|
@@ -163,7 +163,7 @@ On the **Project Attributes** page, fill in the fields as follows and click **Ne
 
 On the **Deployment Configuration** page, fill in the fields as follows and click **Next**.
 
-![Deployment Configuration — ABAP target, ZLABELPRINT repository](image-15.png)
+![Deployment Configuration — ABAP target, ZLABELPRINT repository](img/image-15.png)
 
 | Field | Value |
 |-------|-------|
@@ -179,7 +179,7 @@ On the **Deployment Configuration** page, fill in the fields as follows and clic
 
 On the **Fiori Launchpad Configuration** page, fill in the semantic object and action, then click **Finish**.
 
-![Fiori Launchpad Configuration — OutboundDelivery, display](image-16.png)
+![Fiori Launchpad Configuration — OutboundDelivery, display](img/image-16.png)
 
 | Field | Value |
 |-------|-------|
@@ -200,7 +200,7 @@ The controller extension handles the **Render PDF** button click: it reads the d
 
 Go to **File → Open Folder**, enter `/home/user/projects/zlabelprint`, and click **OK**.
 
-![Open Folder — /home/user/projects/zlabelprint](image-17.png)
+![Open Folder — /home/user/projects/zlabelprint](img/image-17.png)
 
 ---
 
@@ -208,7 +208,7 @@ Go to **File → Open Folder**, enter `/home/user/projects/zlabelprint`, and cli
 
 In the **Storyboard**, hover over the `zlabelprint` application card and click **Open in Page Map**.
 
-![Storyboard — click Open in Page Map](image-19.png)
+![Storyboard — click Open in Page Map](img/image-19.png)
 
 The Page Map shows the three-page hierarchy: **List Report (ZOBJ_DN)** → **Object Page (ZOBJ_DN)** → **Object Page (ZOBJ_DN_ITEMS)**.
 
@@ -218,15 +218,15 @@ The Page Map shows the three-page hierarchy: **List Report (ZOBJ_DN)** → **Obj
 
 In the Page Map, click the **edit** (pencil) icon on the bottom **Object Page** (`ZOBJ_DN_ITEMSObjectPage`).
 
-![Page Map — click edit on ZOBJ_DN_ITEMSObjectPage](image-24.png)
+![Page Map — click edit on ZOBJ_DN_ITEMSObjectPage](img/image-24.png)
 
 In the **Page Editor** right panel, scroll to **Controller Extensions** for `#ZOBJ_DN_ITEMSObjectPage` and click **Add Controller Extension**.
 
-![Page Editor — Add Controller Extension for ZOBJ_DN_ITEMSObjectPage](image-20.png)
+![Page Editor — Add Controller Extension for ZOBJ_DN_ITEMSObjectPage](img/image-20.png)
 
 In the **Add Controller Extension** dialog, enter the controller name and click **Add**.
 
-![Add Controller Extension dialog — DnitemController](image-21.png)
+![Add Controller Extension dialog — DnitemController](img/image-21.png)
 
 | Field | Value |
 |-------|-------|
@@ -243,7 +243,7 @@ BAS creates `webapp/ext/controller/DnitemController.controller.js` and opens it.
 
 Replace the entire content of `DnitemController.controller.js` with the following, then save.
 
-![DnitemController.controller.js open in BAS editor](image-23.png)
+![DnitemController.controller.js open in BAS editor](img/image-23.png)
 
 ```javascript
 sap.ui.define(['sap/ui/core/mvc/ControllerExtension','sap/base/security/URLWhitelist','sap/ui/model/json/JSONModel'], function (ControllerExtension,URLWhitelist,JSONModel) {
@@ -338,11 +338,11 @@ var filename = dn+dnItem ;
 
 In the **Page Editor** for `ZOBJ_DN_ITEMSObjectPage`, scroll to **Sections**, click the **+** icon, and select **Add Custom Section**.
 
-![Page Editor — Sections → Add Custom Section](image-25.png)
+![Page Editor — Sections → Add Custom Section](img/image-25.png)
 
 Fill in the **Add Custom Section** dialog as follows and click **Add**.
 
-![Add Custom Section dialog — PDFRenderView](image-26.png)
+![Add Custom Section dialog — PDFRenderView](img/image-26.png)
 
 | Field | Value |
 |-------|-------|
@@ -360,7 +360,7 @@ Fill in the **Add Custom Section** dialog as follows and click **Add**.
 
 BAS creates `webapp/ext/fragment/PdfFragment.fragment.xml`. Replace its entire content with the following, then save.
 
-![PdfFragment.fragment.xml open in BAS editor](image-27.png)
+![PdfFragment.fragment.xml open in BAS editor](img/image-27.png)
 
 ```xml
 <core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:macros="sap.fe.macros">
@@ -386,11 +386,11 @@ BAS creates `webapp/ext/fragment/PdfFragment.fragment.xml`. Replace its entire c
 
 In the **Page Editor** for `ZOBJ_DN_ITEMSObjectPage`, go to **Header → Actions**, click the **+** icon, and select **Add Custom Action**.
 
-![Page Editor — Header Actions → Add Custom Action](image-29.png)
+![Page Editor — Header Actions → Add Custom Action](img/image-29.png)
 
 Fill in the **New Custom Action** dialog as follows and click **Add**.
 
-![New Custom Action dialog — Render PDF](image-30.png)
+![New Custom Action dialog — Render PDF](img/image-30.png)
 
 | Field | Value |
 |-------|-------|
@@ -408,7 +408,7 @@ Fill in the **New Custom Action** dialog as follows and click **Add**.
 
 In the **Page Map**, select the root application node. In the properties panel on the right, find **Flexible Column Layout** and set it to **Enabled**.
 
-![Page Map — enable Flexible Column Layout](image-28.png)
+![Page Map — enable Flexible Column Layout](img/image-28.png)
 
 The Flexible Column Layout displays the List Report and Object Page side-by-side so users can see the PDF viewer alongside the delivery list.
 
@@ -420,7 +420,7 @@ The Flexible Column Layout displays the List Report and Object Page side-by-side
 
 From the **Storyboard**, hover over the `zlabelprint` card and click **Open Application Info**.
 
-![Storyboard — click Open Application Info](image-32.png)
+![Storyboard — click Open Application Info](img/image-32.png)
 
 ---
 
@@ -428,11 +428,11 @@ From the **Storyboard**, hover over the `zlabelprint` card and click **Open Appl
 
 In the **Application Info** panel, click **Preview Application**.
 
-![Application Info — click Preview Application](image-33.png)
+![Application Info — click Preview Application](img/image-33.png)
 
 From the preview options dropdown, select the **NPM Script** that uses `ui5-mock.yaml` (or `ui5-local.yaml` to connect to the live backend), then confirm.
 
-![Select preview script from dropdown](image-34.png)
+![Select preview script from dropdown](img/image-34.png)
 
 BAS starts a local server and opens the app in a new browser tab.
 
@@ -442,11 +442,11 @@ BAS starts a local server and opens the app in a new browser tab.
 
 The app opens with the **Outbound Delivery Application** List Report. Click **Go** to load deliveries.
 
-![List Report — click Go to load deliveries](image-35.png)
+![List Report — click Go to load deliveries](img/image-35.png)
 
 Select a delivery row to open its Object Page, then click on a delivery item to open the items Object Page. Click **Render PDF** to trigger the label print action. The rendered PDF appears in the **PDFRenderView** section on the right.
 
-![Flexible Column Layout — PDF rendered in PDFRenderView section](image-37.png)
+![Flexible Column Layout — PDF rendered in PDFRenderView section](img/image-37.png)
 
 ---
 

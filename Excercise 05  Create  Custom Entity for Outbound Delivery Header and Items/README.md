@@ -15,11 +15,11 @@ Both entities are backed by the query class `ZCL_DN_QUERY` (created in Exercise 
 
 In the **Project Explorer**, right-click the `ZLABELPRINT` package and choose **New → Other ABAP Repository Object**.
 
-![Right-click package — New → Other ABAP Repository Object](image.png)
+![Right-click package — New → Other ABAP Repository Object](img/image.png)
 
 In the search box, type `DATA` to filter the list. Under **Core Data Services**, select **Data Definition** and click **Next**.
 
-![Select Data Definition](image-1.png)
+![Select Data Definition](img/image-1.png)
 
 ---
 
@@ -27,7 +27,7 @@ In the search box, type `DATA` to filter the list. Under **Core Data Services**,
 
 Fill in the wizard fields as follows, then click **Next**.
 
-![New Data Definition — ZOBJ_DN](image-2.png)
+![New Data Definition — ZOBJ_DN](img/image-2.png)
 
 | Field | Value |
 |-------|-------|
@@ -41,7 +41,7 @@ Fill in the wizard fields as follows, then click **Next**.
 
 Select the `ZLABELPRINT_PACKAGE` transport request created in Exercise 04 and click **Next**.
 
-![Select transport request](image-3.png)
+![Select transport request](img/image-3.png)
 
 ---
 
@@ -49,7 +49,7 @@ Select the `ZLABELPRINT_PACKAGE` transport request created in Exercise 04 and cl
 
 On the **Templates** page, select **Define Custom Entity with Parameters** and click **Finish**.
 
-![Select Define Custom Entity with Parameters template](image-4.png)
+![Select Define Custom Entity with Parameters template](img/image-4.png)
 
 ---
 
@@ -57,7 +57,7 @@ On the **Templates** page, select **Define Custom Entity with Parameters** and c
 
 The editor opens with the template stub. Replace the entire contents with the following code, then press **`Cmd+S`** to save and **`Cmd+F3`** to activate.
 
-![ZOBJ_DN activated in the editor](image-5.png)
+![ZOBJ_DN activated in the editor](img/image-5.png)
 
 ```cds
 @EndUserText.label: 'ZOBJ_DN'
@@ -249,7 +249,7 @@ Right-click the `ZLABELPRINT` package and choose **New → Other ABAP Repository
 
 Fill in the wizard fields as follows, then click **Next**.
 
-![New Data Definition — ZOBJ_DN_ITEMS](image-6.png)
+![New Data Definition — ZOBJ_DN_ITEMS](img/image-6.png)
 
 | Field | Value |
 |-------|-------|
@@ -265,7 +265,7 @@ Select the `ZLABELPRINT_PACKAGE` transport request, then on the **Templates** pa
 
 Replace the entire contents of the editor with the following code, then press **`Cmd+S`** to save and **`Cmd+F3`** to activate.
 
-![ZOBJ_DN_ITEMS activated in the editor](image-7.png)
+![ZOBJ_DN_ITEMS activated in the editor](img/image-7.png)
 
 ```cds
 @EndUserText.label: 'ZOBJ_DN_ITEMS'

@@ -8,7 +8,7 @@ In this exercise you will create the ABAP class `ZCL_DN_QUERY`, which implements
 
 In the **Project Explorer**, right-click the package `ZLABELPRINT` and choose **New → ABAP Class**.
 
-![Right-click ZLABELPRINT → New → ABAP Class](image.png)
+![Right-click ZLABELPRINT → New → ABAP Class](img/image.png)
 
 ---
 
@@ -16,7 +16,7 @@ In the **Project Explorer**, right-click the package `ZLABELPRINT` and choose **
 
 In the **New ABAP Class** wizard, fill in the fields as follows. Click **Add…** next to the **Interfaces** field and add `IF_RAP_QUERY_PROVIDER`. Then click **Next**.
 
-![New ABAP Class wizard with IF_RAP_QUERY_PROVIDER](image-1.png)
+![New ABAP Class wizard with IF_RAP_QUERY_PROVIDER](img/image-1.png)
 
 | Field | Value |
 |-------|-------|
@@ -32,7 +32,7 @@ In the **New ABAP Class** wizard, fill in the fields as follows. Click **Add…*
 
 Select the `ZLABELPRINT_PACKAGE` transport request and click **Finish**.
 
-![Select ZLABELPRINT_PACKAGE transport request](image-3.png)
+![Select ZLABELPRINT_PACKAGE transport request](img/image-3.png)
 
 | Field | Value |
 |-------|-------|
@@ -44,7 +44,7 @@ Select the `ZLABELPRINT_PACKAGE` transport request and click **Finish**.
 
 Eclipse generates a skeleton class. Replace the entire contents with the following implementation, then save (`Cmd+S`).
 
-![Class ZCL_DN_QUERY open in Eclipse editor](image-2.png)
+![Class ZCL_DN_QUERY open in Eclipse editor](img/image-2.png)
 
 ```abap
 CLASS zcl_dn_query DEFINITION
@@ -232,7 +232,7 @@ ENDCLASS.
 
 Right-click `ZCL_DN_QUERY` in the Project Explorer and choose **Activate**, or press `Cmd+F3`.
 
-![Activate ZCL_DN_QUERY in Eclipse](image-4.png)
+![Activate ZCL_DN_QUERY in Eclipse](img/image-4.png)
 
 Activation compiles the class and makes it available to the RAP framework at runtime. The class must activate without errors before you proceed.
 

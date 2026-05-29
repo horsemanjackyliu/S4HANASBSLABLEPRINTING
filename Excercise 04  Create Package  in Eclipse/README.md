@@ -8,11 +8,11 @@ In this exercise you will create the ABAP package `ZLABELPRINT` in Eclipse ADT. 
 
 In the **Project Explorer**, right-click the superpackage `ZLOCAL` and choose **New → ABAP Package**.
 
-![Right-click ZLOCAL and choose New → ABAP Package](image.png)
+![Right-click ZLOCAL and choose New → ABAP Package](img/image.png)
 
 > If you do not see **ABAP Package** directly in the menu, choose **New → Other ABAP Repository Object**, type `package` in the search box, select **ABAP Package**, and click **Next**.
 
-![Alternative: New → Other ABAP Repository Object](image-4.png)
+![Alternative: New → Other ABAP Repository Object](img/image-4.png)
 
 ---
 
@@ -20,7 +20,7 @@ In the **Project Explorer**, right-click the superpackage `ZLOCAL` and choose **
 
 Fill in the wizard fields as follows, then click **Next**.
 
-![New ABAP Package — name and type](image-1.png)
+![New ABAP Package — name and type](img/image-1.png)
 
 | Field | Value |
 |-------|-------|
@@ -35,7 +35,7 @@ Fill in the wizard fields as follows, then click **Next**.
 
 The next page shows the software component inherited from `ZLOCAL`. Leave all fields as pre-populated and click **Next**.
 
-![Software component page — leave defaults](image-2.png)
+![Software component page — leave defaults](img/image-2.png)
 
 | Field | Value |
 |-------|-------|
@@ -49,7 +49,7 @@ The next page shows the software component inherited from `ZLOCAL`. Leave all fi
 
 Select **Create a new request** and enter the description `ZLABELPRINT_PACKAGE`. Click **Finish**.
 
-![Create new transport request ZLABELPRINT_PACKAGE](image-3.png)
+![Create new transport request ZLABELPRINT_PACKAGE](img/image-3.png)
 
 | Field | Value |
 |-------|-------|

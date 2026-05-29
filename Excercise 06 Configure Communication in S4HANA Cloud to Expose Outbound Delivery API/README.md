@@ -21,7 +21,7 @@ A communication user is a technical user that the external system will authentic
 
 In the S/4HANA Cloud Fiori Launchpad search bar, type `communication user` and select **Maintain Communication Users**.
 
-![Search for Maintain Communication Users](image-1.png)
+![Search for Maintain Communication Users](img/image-1.png)
 
 ---
 
@@ -29,11 +29,11 @@ In the S/4HANA Cloud Fiori Launchpad search bar, type `communication user` and s
 
 On the **Maintain Communication Users** list page, click **New**.
 
-![Maintain Communication Users list — click New](image-2.png)
+![Maintain Communication Users list — click New](img/image-2.png)
 
 Fill in the form as follows, then click **Propose Password** to generate a password. Note the generated password — you will need it when configuring the Communication System in the BTP ABAP Environment (Exercise 09). Click **Save**.
 
-![New communication user PRINT_EXT_USER with Propose Password](image-3.png)
+![New communication user PRINT_EXT_USER with Propose Password](img/image-3.png)
 
 | Field | Value |
 |-------|-------|
@@ -53,7 +53,7 @@ A Communication System represents the external system (your BTP ABAP Environment
 
 In the Fiori Launchpad search bar, type `communication sys` and select **Communication Systems**.
 
-![Search for Communication Systems](image-4.png)
+![Search for Communication Systems](img/image-4.png)
 
 ---
 
@@ -61,7 +61,7 @@ In the Fiori Launchpad search bar, type `communication sys` and select **Communi
 
 On the **Communication Systems** list page, click **New**.
 
-![Communication Systems list — click New](image-5.png)
+![Communication Systems list — click New](img/image-5.png)
 
 ---
 
@@ -69,7 +69,7 @@ On the **Communication Systems** list page, click **New**.
 
 In the new Communication System form, fill in the following fields:
 
-![New Communication System — system details](image.png)
+![New Communication System — system details](img/image.png)
 
 | Field | Value |
 |-------|-------|
@@ -82,7 +82,7 @@ In the new Communication System form, fill in the following fields:
 
 Scroll down to the **Users for Inbound Communication** section, click **+**, and add the communication user you created in Part 1:
 
-![Add inbound communication user](image-6.png)
+![Add inbound communication user](img/image-6.png)
 
 | Field | Value |
 |-------|-------|
@@ -101,7 +101,7 @@ A Communication Arrangement links a predefined communication scenario (which def
 
 In the Fiori Launchpad search bar, type `communication arr` and select **Communication Arrangements**.
 
-![Search for Communication Arrangements](image-7.png)
+![Search for Communication Arrangements](img/image-7.png)
 
 ---
 
@@ -109,7 +109,7 @@ In the Fiori Launchpad search bar, type `communication arr` and select **Communi
 
 On the **Communication Arrangements** list page, click **New**.
 
-![Communication Arrangements list — click New](image-8.png)
+![Communication Arrangements list — click New](img/image-8.png)
 
 ---
 
@@ -117,7 +117,7 @@ On the **Communication Arrangements** list page, click **New**.
 
 Fill in the form using the values below:
 
-![Communication Arrangement SAP_COM_0036_labelprinting details](image-9.png)
+![Communication Arrangement SAP_COM_0036_labelprinting details](img/image-9.png)
 
 | Field | Value |
 |-------|-------|
@@ -138,7 +138,7 @@ The metadata file (`.edmx`) describes the structure of the Outbound Delivery ODa
 
 In the saved Communication Arrangement, locate the **Inbound Services** table. Find the row for `API_OUTBOUND_DELIVERY_SRV;v=0002` and click the **download metadata** icon on the right side of that row.
 
-![Download metadata for API_OUTBOUND_DELIVERY_SRV;v=0002](image-10.png)
+![Download metadata for API_OUTBOUND_DELIVERY_SRV;v=0002](img/image-10.png)
 
 Save the downloaded file as:
 

@@ -19,7 +19,7 @@ The service definition is a short CDS artifact that lists the entities to be exp
 
 In the **Project Explorer**, right-click the package `ZLABELPRINT` and choose **New → New Service Definition**.
 
-![Right-click ZLABELPRINT → New → New Service Definition](image.png)
+![Right-click ZLABELPRINT → New → New Service Definition](img/image.png)
 
 ---
 
@@ -27,7 +27,7 @@ In the **Project Explorer**, right-click the package `ZLABELPRINT` and choose **
 
 Fill in the fields as follows and click **Next**.
 
-![New Service Definition wizard](image-1.png)
+![New Service Definition wizard](img/image-1.png)
 
 | Field | Value |
 |-------|-------|
@@ -43,7 +43,7 @@ Fill in the fields as follows and click **Next**.
 
 Select the `ZLABELPRINT_PACKAGE` transport request and click **Finish**.
 
-![Select ZLABELPRINT_PACKAGE transport request](image-2.png)
+![Select ZLABELPRINT_PACKAGE transport request](img/image-2.png)
 
 ---
 
@@ -51,7 +51,7 @@ Select the `ZLABELPRINT_PACKAGE` transport request and click **Finish**.
 
 On the **Templates** page, select **Define Service** and click **Finish**.
 
-![Select Define Service template](image-3.png)
+![Select Define Service template](img/image-3.png)
 
 ---
 
@@ -59,7 +59,7 @@ On the **Templates** page, select **Define Service** and click **Finish**.
 
 Eclipse generates a skeleton. Replace the content with the following, then save (`Cmd+S`) and activate (`Cmd+F3`).
 
-![ZSRV_DN open in Eclipse editor with both entities exposed](image-4.png)
+![ZSRV_DN open in Eclipse editor with both entities exposed](img/image-4.png)
 
 ```cds
 @EndUserText.label: 'ZSRV_DN'
@@ -79,7 +79,7 @@ The service binding publishes the service definition as a concrete OData V4 endp
 
 In the **Project Explorer**, right-click `ZSRV_DN` under **Service Definitions** and choose **New → New Service Binding**.
 
-![Right-click ZSRV_DN → New → New Service Binding](image-5.png)
+![Right-click ZSRV_DN → New → New Service Binding](img/image-5.png)
 
 ---
 
@@ -87,7 +87,7 @@ In the **Project Explorer**, right-click `ZSRV_DN` under **Service Definitions**
 
 Fill in the fields as follows and click **Next**.
 
-![New Service Binding wizard](image-7.png)
+![New Service Binding wizard](img/image-7.png)
 
 | Field | Value |
 |-------|-------|
@@ -103,7 +103,7 @@ Fill in the fields as follows and click **Next**.
 
 Select the `ZLABELPRINT_PACKAGE` transport request and click **Finish**.
 
-![Select ZLABELPRINT_PACKAGE transport request](image-8.png)
+![Select ZLABELPRINT_PACKAGE transport request](img/image-8.png)
 
 ---
 
@@ -111,7 +111,7 @@ Select the `ZLABELPRINT_PACKAGE` transport request and click **Finish**.
 
 Eclipse opens the service binding editor. Click **Publish** to activate the OData V4 endpoint. After publishing, the **Service Version Details** panel on the right shows the generated service URL.
 
-![Service binding editor — click Publish](image-9.png)
+![Service binding editor — click Publish](img/image-9.png)
 
 ---
 
@@ -119,23 +119,23 @@ Eclipse opens the service binding editor. Click **Publish** to activate the ODat
 
 After publishing, the **Service Name** table lists `ZSRV_DN`. Click the **Preview** button to open the Fiori Elements preview in your browser.
 
-![Service binding after publishing — click Preview](image-11.png)
+![Service binding after publishing — click Preview](img/image-11.png)
 
 The preview opens a Fiori Elements List Report showing outbound delivery headers fetched live from S/4HANA Cloud.
 
-![List Report preview — outbound delivery headers](image-12.png)
+![List Report preview — outbound delivery headers](img/image-12.png)
 
 Click on a delivery row to open the Object Page and see the delivery items.
 
-![Object Page — delivery items with Render button](image-13.png)
+![Object Page — delivery items with Render button](img/image-13.png)
 
 Click on a delivery item to open its detail page. The **Render** button appears in the top-right corner.
 
-![Delivery item detail — Render button](image-14.png)
+![Delivery item detail — Render button](img/image-14.png)
 
 Clicking **Render** opens the action dialog where you enter the label parameters.
 
-![Render dialog — materialNo, quantity, packageNo](image-15.png)
+![Render dialog — materialNo, quantity, packageNo](img/image-15.png)
 
 ---
 

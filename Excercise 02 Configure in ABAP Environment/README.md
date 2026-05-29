@@ -29,11 +29,11 @@ The Communication System entry registers the Forms Service host and its OAuth 2.
 
 Open the BTP ABAP Environment Fiori Launchpad. In the search bar, type `commu` and select **Communication Systems** from the results.
 
-![Search for Communication Systems app](image-5.png)
+![Search for Communication Systems app](img/image-5.png)
 
 On the **Communication Systems** list page, click **New**.
 
-![Communication Systems list — click New](image-6.png)
+![Communication Systems list — click New](img/image-6.png)
 
 ---
 
@@ -41,7 +41,7 @@ On the **Communication Systems** list page, click **New**.
 
 Enter a **System ID** and **System Name** of your choice, then fill in the **Technical Data** fields using values from your Forms Service service key:
 
-![Communication System general and OAuth settings](image.png)
+![Communication System general and OAuth settings](img/image.png)
 
 | Field | Value |
 |-------|-------|
@@ -58,7 +58,7 @@ Enter a **System ID** and **System Name** of your choice, then fill in the **Tec
 
 Scroll down to the **Users for Outbound Communication** section and click **+** to add a new entry.
 
-![Add outbound communication user and save](image-1.png)
+![Add outbound communication user and save](img/image-1.png)
 
 | Field | Value |
 |-------|-------|
@@ -78,11 +78,11 @@ The Communication Arrangement links the Communication System you just created to
 
 In the Fiori Launchpad search bar, type `commu` and select **Communication Arrangements**.
 
-![Search for Communication Arrangements app](image-3.png)
+![Search for Communication Arrangements app](img/image-3.png)
 
 On the **Communication Arrangements** list page, click **New**.
 
-![Communication Arrangements list — click New](image-4.png)
+![Communication Arrangements list — click New](img/image-4.png)
 
 ---
 
@@ -90,7 +90,7 @@ On the **Communication Arrangements** list page, click **New**.
 
 In the new arrangement form, fill in the fields as follows:
 
-![Communication Arrangement details](image-2.png)
+![Communication Arrangement details](img/image-2.png)
 
 | Field | Value |
 |-------|-------|

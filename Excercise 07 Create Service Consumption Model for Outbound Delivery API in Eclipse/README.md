@@ -18,11 +18,11 @@ Save it locally — you will need to browse to it during the wizard.
 
 In the **Project Explorer**, right-click your package and choose **New → Other ABAP Repository Object**.
 
-![Right-click to open New ABAP Repository Object wizard](image-1.png)
+![Right-click to open New ABAP Repository Object wizard](img/image-1.png)
 
 In the search box, type `CONS` to filter the list. Under **Business Services**, select **Service Consumption Model** and click **Next**.
 
-![Select Service Consumption Model](image.png)
+![Select Service Consumption Model](img/image.png)
 
 ---
 
@@ -30,7 +30,7 @@ In the search box, type `CONS` to filter the list. Under **Business Services**, 
 
 Fill in the wizard fields as follows, then click **Next**.
 
-![Service Consumption Model details](image-2.png)
+![Service Consumption Model details](img/image-2.png)
 
 | Field                   | Value         |
 | ----------------------- | ------------- |
@@ -45,7 +45,7 @@ Fill in the wizard fields as follows, then click **Next**.
 
 Browse to the `API_OUTBOUND_DELIVERY_SRV_0002.edmx` file you downloaded in the prerequisites. Set the **Class Name** to `ZCL_DN_SRV`, then click **Next**.
 
-![Select metadata file and set class name](image-3.png)
+![Select metadata file and set class name](img/image-3.png)
 
 | Field                 | Value                                 |
 | --------------------- | ------------------------------------- |
@@ -58,7 +58,7 @@ Browse to the `API_OUTBOUND_DELIVERY_SRV_0002.edmx` file you downloaded in the p
 
 The wizard parses the metadata file and displays all entity sets and types it found. Review the list to confirm the expected Outbound Delivery entities are present (for example `A_OutbDeliveryHeader`, `A_OutbDeliveryItem`), then click **Next**.
 
-![Review OData service components](image-4.png)
+![Review OData service components](img/image-4.png)
 
 ---
 
@@ -66,7 +66,7 @@ The wizard parses the metadata file and displays all entity sets and types it fo
 
 Select ETag support for the entity types that require optimistic concurrency control. Enable ETag for the following types, then click **Next**.
 
-![Configure ETag support](image-5.png)
+![Configure ETag support](img/image-5.png)
 
 | Entity Type                  | ETag Support |
 | ---------------------------- | :----------: |
@@ -81,7 +81,7 @@ Select ETag support for the entity types that require optimistic concurrency con
 
 Choose the transport request associated with your label printing package (`ZLABELPRINT_PACKAGE`), then click **Finish**.
 
-![Select transport request](image-6.png)
+![Select transport request](img/image-6.png)
 
 ---
 
@@ -89,7 +89,7 @@ Choose the transport request associated with your label printing package (`ZLABE
 
 The wizard generates the Service Consumption Model `ZDN_SRV` and the proxy class `ZCL_DN_SRV`. The ADT editor opens automatically and displays the entity sets, entity types, and a preview of the generated ABAP proxy code.
 
-![Generated Service Consumption Model ZDN_SRV](image-7.png)
+![Generated Service Consumption Model ZDN_SRV](img/image-7.png)
 
 Confirm that:
 

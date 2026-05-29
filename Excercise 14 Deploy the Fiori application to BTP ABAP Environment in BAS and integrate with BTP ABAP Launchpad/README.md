@@ -25,11 +25,11 @@ In BAS, open the `zlabelprint` project. From the **Storyboard**, hover over the 
 
 In the **Application Info** panel, click **Deploy Application**. BAS first runs a test deployment to validate the configuration.
 
-![Application Info — Test deployment](image.png)
+![Application Info — Test deployment](img/image.png)
 
 When the test deployment completes successfully, click **Deploy** to push the application to the BTP ABAP Environment. BAS uploads the app to the SAPUI5 ABAP Repository `ZLABELPRINT` that was configured in Exercise 13.
 
-![Deployment confirmation](image-1.png)
+![Deployment confirmation](img/image-1.png)
 
 > If prompted for credentials, enter your BTP ABAP Environment user name and password.
 
@@ -43,7 +43,7 @@ After deployment, switch to Eclipse ADT and open the **Project Explorer**. Expan
 
 Also verify that the **Fiori Launchpad App Descriptor Item** `ZLABELPRINT_USR` has been created under **Fiori Launchpad App Descriptor Items**. This descriptor item links the deployed app to the Launchpad.
 
-![Eclipse ADT — BSP Application ZLABELPRINT and App Descriptor ZLABELPRINT_USR](image-3.png)
+![Eclipse ADT — BSP Application ZLABELPRINT and App Descriptor ZLABELPRINT_USR](img/image-3.png)
 
 > If either object is missing, re-run the deployment from BAS and check for errors in the deployment log.
 
@@ -57,7 +57,7 @@ An **IAM App** (Identity and Access Management App) registers the Fiori applicat
 
 In the **Project Explorer**, right-click the package `ZLABELPRINT` and choose **New → Other ABAP Repository Objects**.
 
-![Right-click ZLABELPRINT → New → Other ABAP Repository Objects](image-10.png)
+![Right-click ZLABELPRINT → New → Other ABAP Repository Objects](img/image-10.png)
 
 ---
 
@@ -65,7 +65,7 @@ In the **Project Explorer**, right-click the package `ZLABELPRINT` and choose **
 
 In the search box, type `IAM` and select **IAM App** from the results. Click **Next**.
 
-![Select IAM App object type](image-4.png)
+![Select IAM App object type](img/image-4.png)
 
 ---
 
@@ -73,7 +73,7 @@ In the search box, type `IAM` and select **IAM App** from the results. Click **N
 
 Fill in the fields as follows and click **Next**.
 
-![New IAM App wizard — ZLABELPRINTING_IAM_APP](image-5.png)
+![New IAM App wizard — ZLABELPRINTING_IAM_APP](img/image-5.png)
 
 | Field | Value |
 |-------|-------|
@@ -90,7 +90,7 @@ Fill in the fields as follows and click **Next**.
 
 Select the `ZLABELPRINT_PACKAGE` transport request and click **Finish**.
 
-![Select ZLABELPRINT_PACKAGE transport request](image-6.png)
+![Select ZLABELPRINT_PACKAGE transport request](img/image-6.png)
 
 ---
 
@@ -98,7 +98,7 @@ Select the `ZLABELPRINT_PACKAGE` transport request and click **Finish**.
 
 Eclipse opens the IAM App editor. In the **Fiori Launchpad App Descr Items** tab, click **+** and add the app descriptor item `ZLABELPRINT_UI5R`.
 
-![IAM App editor — assign Fiori Launchpad App Descr Item ZLABELPRINT_UI5R](image-7.png)
+![IAM App editor — assign Fiori Launchpad App Descr Item ZLABELPRINT_UI5R](img/image-7.png)
 
 ---
 
@@ -106,7 +106,7 @@ Eclipse opens the IAM App editor. In the **Fiori Launchpad App Descr Items** tab
 
 Switch to the **Services** tab. Click **+** and add the OData V4 service binding:
 
-![IAM App editor — add OData V4 service ZSRVBND_DN](image-8.png)
+![IAM App editor — add OData V4 service ZSRVBND_DN](img/image-8.png)
 
 | Field | Value |
 |-------|-------|
@@ -119,7 +119,7 @@ Switch to the **Services** tab. Click **+** and add the OData V4 service binding
 
 Click **Publish Locally** to make the IAM App available to the Business Catalog editor in the next step.
 
-![IAM App — click Publish Locally](image-9.png)
+![IAM App — click Publish Locally](img/image-9.png)
 
 > Publishing locally does not deploy to production. It makes the IAM App visible within ADT for assignment to a Business Catalog.
 
@@ -133,7 +133,7 @@ A **Business Catalog** groups one or more IAM Apps into a logical unit that can 
 
 In the **Project Explorer**, right-click the package `ZLABELPRINT` and choose **New → Other ABAP Repository Objects** (same starting point as Step 3).
 
-![Right-click ZLABELPRINT → New → Other ABAP Repository Objects](image-10.png)
+![Right-click ZLABELPRINT → New → Other ABAP Repository Objects](img/image-10.png)
 
 ---
 
@@ -141,7 +141,7 @@ In the **Project Explorer**, right-click the package `ZLABELPRINT` and choose **
 
 In the search box, type `Business Catalog` and select **Business Catalog** from the results. Click **Next**.
 
-![Select Business Catalog object type](image-11.png)
+![Select Business Catalog object type](img/image-11.png)
 
 ---
 
@@ -149,7 +149,7 @@ In the search box, type `Business Catalog` and select **Business Catalog** from 
 
 Fill in the fields as follows and click **Next**.
 
-![New Business Catalog wizard — ZLABELPRINT_BC](image-12.png)
+![New Business Catalog wizard — ZLABELPRINT_BC](img/image-12.png)
 
 | Field | Value |
 |-------|-------|
@@ -163,7 +163,7 @@ Fill in the fields as follows and click **Next**.
 
 Select the `ZLABELPRINT_PACKAGE` transport request and click **Finish**.
 
-![Select transport request](image-13.png)
+![Select transport request](img/image-13.png)
 
 ---
 
@@ -171,7 +171,7 @@ Select the `ZLABELPRINT_PACKAGE` transport request and click **Finish**.
 
 Eclipse opens the Business Catalog editor. In the **Apps** tab, click **+** to add the IAM App.
 
-![Business Catalog editor — Apps tab, click +](image-14.png)
+![Business Catalog editor — Apps tab, click +](img/image-14.png)
 
 In the dialog, enter the IAM App name:
 
@@ -180,7 +180,7 @@ In the dialog, enter the IAM App name:
 | IAM App | `ZLABELPRINTING_IAM_APP_EXT` |
 | Assignment ID | `ZLABELPRINT_BC_0001` (auto-generated or enter manually) |
 
-![Assign IAM App ZLABELPRINTING_IAM_APP_EXT](image-15.png)
+![Assign IAM App ZLABELPRINTING_IAM_APP_EXT](img/image-15.png)
 
 ---
 
@@ -188,11 +188,11 @@ In the dialog, enter the IAM App name:
 
 Click **Publish Locally** to make the catalog available for assignment to a Business Role.
 
-![Business Catalog — click Publish Locally](image-16.png)
+![Business Catalog — click Publish Locally](img/image-16.png)
 
 After publishing, the **Apps** tab shows the assignment with status **Published**.
 
-![Business Catalog — published assignment](image-17.png)
+![Business Catalog — published assignment](img/image-17.png)
 
 ---
 
@@ -204,7 +204,7 @@ A **Business Role** grants users access to the apps in a Business Catalog. You w
 
 In the BTP ABAP Environment Fiori Launchpad, search for `Business Roles` and open **Maintain Business Roles**.
 
-![Search for Maintain Business Roles](image-19.png)
+![Search for Maintain Business Roles](img/image-19.png)
 
 ---
 
@@ -212,11 +212,11 @@ In the BTP ABAP Environment Fiori Launchpad, search for `Business Roles` and ope
 
 On the **Maintain Business Roles** list page, click **New**.
 
-![Maintain Business Roles — click New](image-20.png)
+![Maintain Business Roles — click New](img/image-20.png)
 
 Fill in the role details:
 
-![New Business Role — BR_Z_LABELPRINT](image-21.png)
+![New Business Role — BR_Z_LABELPRINT](img/image-21.png)
 
 | Field | Value |
 |-------|-------|
@@ -229,7 +229,7 @@ Fill in the role details:
 
 In the **Assigned Business Catalogs** section, click **Add** and select `ZLABELPRINT_BC`.
 
-![Assign Business Catalog ZLABELPRINT_BC](image-22.png)
+![Assign Business Catalog ZLABELPRINT_BC](img/image-22.png)
 
 ---
 
@@ -237,7 +237,7 @@ In the **Assigned Business Catalogs** section, click **Add** and select `ZLABELP
 
 Switch to the **Access Categories** tab. Set all access categories to **Unrestricted** to allow full access to the application.
 
-![Access Categories — set to Unrestricted](image-23.png)
+![Access Categories — set to Unrestricted](img/image-23.png)
 
 ---
 
@@ -245,11 +245,11 @@ Switch to the **Access Categories** tab. Set all access categories to **Unrestri
 
 Switch to the **Assigned Users** tab and click **Add**. Search for the user(s) who need access to the label printing application and add them.
 
-![Assign users to BR_Z_LABELPRINT](image-24.png)
+![Assign users to BR_Z_LABELPRINT](img/image-24.png)
 
 Click **Save** to create the Business Role.
 
-![Business Role saved](image-26.png)
+![Business Role saved](img/image-26.png)
 
 ---
 
@@ -261,7 +261,7 @@ Launchpad Spaces and Pages are customizing objects that must be transported betw
 
 In the BTP ABAP Environment Fiori Launchpad, search for `Export Customizing` and open **Export Customizing Transports**.
 
-![Search for Export Customizing Transports](image-32.png)
+![Search for Export Customizing Transports](img/image-32.png)
 
 ---
 
@@ -269,11 +269,11 @@ In the BTP ABAP Environment Fiori Launchpad, search for `Export Customizing` and
 
 On the **Export Customizing Transports** list page, click **Create**.
 
-![Export Customizing Transports — click Create](image-30.png)
+![Export Customizing Transports — click Create](img/image-30.png)
 
 Fill in the transport request details:
 
-![New transport request dialog](image-31.png)
+![New transport request dialog](img/image-31.png)
 
 | Field | Value |
 |-------|-------|
@@ -288,9 +288,9 @@ Click **Create**. The system generates a transport request number (e.g. `H02K900
 
 Open the newly created transport request and check the **Category** field. If it is not set to **Default**, click **Change Category** and set it to **Default**.
 
-![Transport request — change Category to Default](image-33.png)
+![Transport request — change Category to Default](img/image-33.png)
 
-![Transport request confirmed with Default category](image-34.png)
+![Transport request confirmed with Default category](img/image-34.png)
 
 > The **Default** category is required for Launchpad customizing objects to be recorded correctly.
 
@@ -304,7 +304,7 @@ A **Launchpad Space** is a named area on the Fiori Launchpad home page. Each spa
 
 In the BTP ABAP Environment Fiori Launchpad, navigate to **Administration → Launchpad** and open **Manage Launchpad Spaces**.
 
-![Administration → Launchpad → Manage Launchpad Spaces](image-37.png)
+![Administration → Launchpad → Manage Launchpad Spaces](img/image-37.png)
 
 ---
 
@@ -312,11 +312,11 @@ In the BTP ABAP Environment Fiori Launchpad, navigate to **Administration → La
 
 On the **Manage Launchpad Spaces** list page, click **Create**.
 
-![Manage Launchpad Spaces — click Create](image-38.png)
+![Manage Launchpad Spaces — click Create](img/image-38.png)
 
 Fill in the space details. When prompted for a transport request, select `H02K900059` (the request you created in Part 6).
 
-![New Launchpad Space dialog](image-39.png)
+![New Launchpad Space dialog](img/image-39.png)
 
 | Field | Value |
 |-------|-------|
@@ -331,7 +331,7 @@ Fill in the space details. When prompted for a transport request, select `H02K90
 
 After the space is created, click **Create Page** (or navigate to the **Pages** tab and click **+**) to add a page to the space.
 
-![Create Page within the space](image-40.png)
+![Create Page within the space](img/image-40.png)
 
 | Field | Value |
 |-------|-------|
@@ -340,7 +340,7 @@ After the space is created, click **Create Page** (or navigate to the **Pages** 
 | Page Title | `Page for label printing` |
 | Transport | `H02K900059` |
 
-![New page details](image-41.png)
+![New page details](img/image-41.png)
 
 ---
 
@@ -348,7 +348,7 @@ After the space is created, click **Create Page** (or navigate to the **Pages** 
 
 In the space editor, go to the **Assigned Roles** section and click **+**. Add the business role `BR_Z_LABELPRINT` so that users with this role can see the space on their Launchpad.
 
-![Assign business role BR_Z_LABELPRINT to the space](image-42.png)
+![Assign business role BR_Z_LABELPRINT to the space](img/image-42.png)
 
 ---
 
@@ -356,19 +356,19 @@ In the space editor, go to the **Assigned Roles** section and click **+**. Add t
 
 Open the page `ZLABELPRINT_PAGE` and click **Add Tile** (or **+**). Search for the tile from the catalog `ZLABELPRINT_BC`.
 
-![Add tile to ZLABELPRINT_PAGE](image-43.png)
+![Add tile to ZLABELPRINT_PAGE](img/image-43.png)
 
 Select the tile **Outbound Delivery Application** and confirm.
 
-![Select Outbound Delivery Application tile](image-44.png)
+![Select Outbound Delivery Application tile](img/image-44.png)
 
 The tile appears on the page.
 
-![Page with Outbound Delivery Application tile added](image-45.png)
+![Page with Outbound Delivery Application tile added](img/image-45.png)
 
 Save the page and space.
 
-![Launchpad Space saved](image-46.png)
+![Launchpad Space saved](img/image-46.png)
 
 ---
 
@@ -378,7 +378,7 @@ Save the page and space.
 
 Log in to the BTP ABAP Environment Fiori Launchpad as a user assigned the `BR_Z_LABELPRINT` role. The **Space for label printing** tab appears on the Launchpad home page.
 
-![Launchpad home — Space for label printing tab](image-50.png)
+![Launchpad home — Space for label printing tab](img/image-50.png)
 
 ---
 
@@ -386,7 +386,7 @@ Log in to the BTP ABAP Environment Fiori Launchpad as a user assigned the `BR_Z_
 
 Click the **Space for label printing** tab to open it. The page shows the **Outbound Delivery Application** tile. Click the tile to launch the application.
 
-![Outbound Delivery Application tile on the Launchpad](image-51.png)
+![Outbound Delivery Application tile on the Launchpad](img/image-51.png)
 
 ---
 
@@ -394,11 +394,11 @@ Click the **Space for label printing** tab to open it. The page shows the **Outb
 
 The app opens with the **List Report** showing outbound deliveries. Click **Go** to load the delivery list.
 
-![List Report — outbound deliveries](image-52.png)
+![List Report — outbound deliveries](img/image-52.png)
 
 Select a delivery to open its Object Page, then click on a delivery item. On the item Object Page, click **Render PDF** to trigger the label printing action. The rendered PDF label appears inline in the **PDFRenderView** section.
 
-![Delivery item Object Page — PDF label rendered](image-53.png)
+![Delivery item Object Page — PDF label rendered](img/image-53.png)
 
 ---
 
