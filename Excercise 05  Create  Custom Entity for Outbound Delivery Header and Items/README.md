@@ -1,19 +1,65 @@
+# Exercise 05: Create Custom Entities for Outbound Delivery Header and Items
 
+In this exercise you will create two **CDS custom entities** in Eclipse ADT that form the RAP data model for the label printing application:
 
-### 1. Create  Custom Entity for Outbound Delivery Header in Eclipse ADT
+- **`ZOBJ_DN`** — the root entity representing an Outbound Delivery header
+- **`ZOBJ_DN_ITEMS`** — the child entity representing Outbound Delivery items, with a composition back to the header
 
-![alt text](image.png)
-![alt text](image-1.png)
-![alt text](image-2.png)
-![alt text](image-3.png)
-![alt text](image-4.png)
-![alt text](image-5.png)
+Both entities are backed by the query class `ZCL_DN_QUERY` (created in Exercise 10), which fetches live data from the S/4HANA Cloud OData API at runtime. The `@UI` annotations embedded in the CDS code drive the Fiori Elements list report and object page built in Exercise 13.
 
+---
 
-Adjust the data definition ZOBJ_DN as the following code:
+## Part 1: Create the Header Entity `ZOBJ_DN`
 
+### Step 1: Open the New Data Definition Wizard
 
-```
+In the **Project Explorer**, right-click the `ZLABELPRINT` package and choose **New → Other ABAP Repository Object**.
+
+![Right-click package — New → Other ABAP Repository Object](image.png)
+
+In the search box, type `DATA` to filter the list. Under **Core Data Services**, select **Data Definition** and click **Next**.
+
+![Select Data Definition](image-1.png)
+
+---
+
+### Step 2: Enter the Data Definition Details
+
+Fill in the wizard fields as follows, then click **Next**.
+
+![New Data Definition — ZOBJ_DN](image-2.png)
+
+| Field | Value |
+|-------|-------|
+| Package | `ZLABELPRINT` |
+| Name | `ZOBJ_DN` |
+| Description | `ZOBJ_DN` |
+
+---
+
+### Step 3: Select a Transport Request
+
+Select the `ZLABELPRINT_PACKAGE` transport request created in Exercise 04 and click **Next**.
+
+![Select transport request](image-3.png)
+
+---
+
+### Step 4: Select the Template
+
+On the **Templates** page, select **Define Custom Entity with Parameters** and click **Finish**.
+
+![Select Define Custom Entity with Parameters template](image-4.png)
+
+---
+
+### Step 5: Replace the Generated Code
+
+The editor opens with the template stub. Replace the entire contents with the following code, then press **`Cmd+S`** to save and **`Cmd+F3`** to activate.
+
+![ZOBJ_DN activated in the editor](image-5.png)
+
+```cds
 @EndUserText.label: 'ZOBJ_DN'
 @ObjectModel.query.implementedBy: 'ABAP:ZCL_DN_QUERY'
 @Metadata: {
@@ -191,22 +237,37 @@ define root custom entity ZOBJ_DN
       _items                     : composition [0..*] of ZOBJ_DN_ITEMS;
 
 }
-
 ```
 
-push **command+s** and **command+f3** to save and activate the code .
+---
 
-### 2. Create  Custom Entity for Outbound Delivery items in Eclipse Adt
+## Part 2: Create the Items Entity `ZOBJ_DN_ITEMS`
 
-![alt text](image.png)
-![alt text](image-1.png)
-![alt text](image-6.png)
-![alt text](image-3.png)
-![alt text](image-4.png)
-![alt text](image-7.png)
+### Step 6: Open the New Data Definition Wizard Again
 
-Adjust the data definition ZOBJ_DNZOBJ_DN_ITEMS with the following code:
-```
+Right-click the `ZLABELPRINT` package and choose **New → Other ABAP Repository Object → Data Definition**, exactly as in Steps 1–2.
+
+Fill in the wizard fields as follows, then click **Next**.
+
+![New Data Definition — ZOBJ_DN_ITEMS](image-6.png)
+
+| Field | Value |
+|-------|-------|
+| Package | `ZLABELPRINT` |
+| Name | `ZOBJ_DN_ITEMS` |
+| Description | `ZOBJ_DN_ITEMS` |
+
+Select the `ZLABELPRINT_PACKAGE` transport request, then on the **Templates** page select **Define Custom Entity with Parameters** and click **Finish**.
+
+---
+
+### Step 7: Replace the Generated Code
+
+Replace the entire contents of the editor with the following code, then press **`Cmd+S`** to save and **`Cmd+F3`** to activate.
+
+![ZOBJ_DN_ITEMS activated in the editor](image-7.png)
+
+```cds
 @EndUserText.label: 'ZOBJ_DN_ITEMS'
 @UI.headerInfo: {
 typeName: 'Outbound Delivery Item',
@@ -408,6 +469,17 @@ define custom entity ZOBJ_DN_ITEMS
 //      _unit:  assiation to  DMO/
 
 }
-
 ```
-push **command+s** and **command+f3** to save and activate the code .
+
+---
+
+## Result
+
+You have created and activated both custom entities in the `ZLABELPRINT` package:
+
+| Object | Type | Role |
+|--------|------|------|
+| `ZOBJ_DN` | Root custom entity | Outbound Delivery header — exposes delivery-level fields and a composition to items |
+| `ZOBJ_DN_ITEMS` | Child custom entity | Outbound Delivery items — exposes item-level fields and the `render` action button |
+
+Both entities reference `ZCL_DN_QUERY` as their query provider. That class is created in **Exercise 10**. The service definition exposing these entities to OData is created in **Exercise 12**.

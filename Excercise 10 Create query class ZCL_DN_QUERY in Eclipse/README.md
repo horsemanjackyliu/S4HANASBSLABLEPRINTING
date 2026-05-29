@@ -1,13 +1,52 @@
-### 1. Create query class ZCL_DN_QUERY in Eclipse
+# Exercise 10: Create the Query Class `ZCL_DN_QUERY` in Eclipse
 
-![alt text](image.png)
-![alt text](image-1.png)
-![alt text](image-3.png)
-![alt text](image-2.png)
+In this exercise you will create the ABAP class `ZCL_DN_QUERY`, which implements the `IF_RAP_QUERY_PROVIDER` interface. This class is the runtime engine behind both custom entities (`ZOBJ_DN` and `ZOBJ_DN_ITEMS`) — when the Fiori app or an OData request reads delivery data, the RAP framework calls `ZCL_DN_QUERY~SELECT`, which in turn calls the S/4HANA Cloud Outbound Delivery API via the communication arrangement set up in Exercise 09.
 
-### 2. Adjust the code of class ZCL_DN_QUERY  like the following:
+---
 
-```
+## Step 1: Create the ABAP Class
+
+In the **Project Explorer**, right-click the package `ZLABELPRINT` and choose **New → ABAP Class**.
+
+![Right-click ZLABELPRINT → New → ABAP Class](image.png)
+
+---
+
+## Step 2: Enter the Class Details
+
+In the **New ABAP Class** wizard, fill in the fields as follows. Click **Add…** next to the **Interfaces** field and add `IF_RAP_QUERY_PROVIDER`. Then click **Next**.
+
+![New ABAP Class wizard with IF_RAP_QUERY_PROVIDER](image-1.png)
+
+| Field | Value |
+|-------|-------|
+| Project | `H02_EN` (your project) |
+| Package | `ZLABELPRINT` |
+| Name | `ZCL_DN_QUERY` |
+| Description | `ZCL_DN_QUERY` |
+| Interfaces | `IF_RAP_QUERY_PROVIDER` |
+
+---
+
+## Step 3: Assign the Transport Request
+
+Select the `ZLABELPRINT_PACKAGE` transport request and click **Finish**.
+
+![Select ZLABELPRINT_PACKAGE transport request](image-3.png)
+
+| Field | Value |
+|-------|-------|
+| Transport Request | `H02K900053` — `ZLABELPRINT_PACKAGE` |
+
+---
+
+## Step 4: Replace the Class Code
+
+Eclipse generates a skeleton class. Replace the entire contents with the following implementation, then save (`Cmd+S`).
+
+![Class ZCL_DN_QUERY open in Eclipse editor](image-2.png)
+
+```abap
 CLASS zcl_dn_query DEFINITION
   PUBLIC
   FINAL
@@ -67,7 +106,6 @@ CLASS zcl_dn_query IMPLEMENTATION.
 
          lv_offset_i = lv_offset .
          lv_max_rows_i = lv_max_rows .
-
 
 
 
@@ -188,7 +226,36 @@ CLASS zcl_dn_query IMPLEMENTATION.
 ENDCLASS.
 ```
 
-Activate the class.
+---
 
-![alt text](image-4.png)
+## Step 5: Activate the Class
 
+Right-click `ZCL_DN_QUERY` in the Project Explorer and choose **Activate**, or press `Cmd+F3`.
+
+![Activate ZCL_DN_QUERY in Eclipse](image-4.png)
+
+Activation compiles the class and makes it available to the RAP framework at runtime. The class must activate without errors before you proceed.
+
+---
+
+## How the Code Works
+
+The `SELECT` method is the single entry point called by the RAP framework for both custom entities. It routes to the correct S/4HANA entity set based on `get_entity_id()`:
+
+| Entity ID | S/4HANA Entity Set | Description |
+|-----------|-------------------|-------------|
+| `ZOBJ_DN` | `A_OUTB_DELIVERY_HEADER` | Delivery header list — supports paging and filters |
+| `ZOBJ_DN_ITEMS` | `A_OUTB_DELIVERY_ITEM` | Delivery items — top 30, filtered by the incoming filter |
+
+The OData proxy is created using:
+- **Communication arrangement:** `ZCOMMU_SCEN_O5P` / system `S4HC_O5P` / service `ZOBT_SRV_O5P_REST` (configured in Exercises 08–09)
+- **Service Consumption Model:** `ZDN_SRV` version `0001` (created in Exercise 07)
+- **Remote service root:** `/sap/opu/odata/sap/API_OUTBOUND_DELIVERY_SRV;v=0002`
+
+---
+
+## Result
+
+`ZCL_DN_QUERY` is now active in the package `ZLABELPRINT`. The custom entities `ZOBJ_DN` and `ZOBJ_DN_ITEMS` can now serve live delivery data from S/4HANA Cloud.
+
+In **Exercise 11**, you will create the behavior definition `ZBEHAV_OBJ_DN` and its implementation class `ZBP_OBJ_DN`, which adds the `render` action that generates and queues a print label for a selected delivery item.

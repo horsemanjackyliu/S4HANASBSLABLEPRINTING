@@ -1,19 +1,74 @@
+# Exercise 11: Create the Behavior Definition for `ZOBJ_DN` in Eclipse
 
-## Create behavior definition for data definition ZOBJ_DN in Eclipse.
+In this exercise you will define the RAP behavior for the custom entities `ZOBJ_DN` and `ZOBJ_DN_ITEMS`, and implement the `render` function that generates a PDF label and pushes it to the print queue.
 
-### Step 1, Create abstract entity for render function  input parameters
+The exercise has three parts:
 
+| Part | What you create |
+|------|----------------|
+| 1 | Abstract entity `ZRENDERPARAM` — input parameters for the `render` function |
+| 2 | Abstract entity `ZPDF_CNT` — result type (PDF byte stream) for the `render` function |
+| 3 | Behavior definition `ZOBJ_DN` and its implementation class `ZBP_OBJ_DN` |
 
-![alt text](image.png)
-![alt text](image-1.png)
-![alt text](image-2.png)
-![alt text](image-3.png)
-![alt text](image-4.png)
-![alt text](image-5.png)
+---
 
-Update the abstract entity zrenderparam with the following code:
+## Part 1: Create the Abstract Entity `ZRENDERPARAM`
 
-```
+`ZRENDERPARAM` defines the three input parameters the Fiori app passes when the user triggers a label print: material number, quantity, and package number.
+
+### Step 1: Open the New ABAP Repository Object Wizard
+
+In the **Project Explorer**, right-click the package `ZLABELPRINT` and choose **New → Other ABAP Repository Objects**.
+
+![Right-click ZLABELPRINT → New → Other ABAP Repository Objects](image.png)
+
+---
+
+### Step 2: Select Data Definition
+
+In the search box type `data def`, select **Data Definition** under **Core Data Services**, and click **Next**.
+
+![Select Data Definition and click Next](image-1.png)
+
+---
+
+### Step 3: Enter the Name
+
+Fill in the fields as follows and click **Next**.
+
+![New Data Definition — name zrenderparam](image-2.png)
+
+| Field | Value |
+|-------|-------|
+| Package | `ZLABELPRINT` |
+| Name | `zrenderparam` |
+| Description | `zrenderparam` |
+
+---
+
+### Step 4: Assign the Transport Request
+
+Select the `ZLABELPRINT_PACKAGE` transport request and click **Next**.
+
+![Select ZLABELPRINT_PACKAGE transport request](image-3.png)
+
+---
+
+### Step 5: Select the Template
+
+On the **Templates** page, select **Define Abstract Entity with Parameters** and click **Finish**.
+
+![Select Define Abstract Entity with Parameters](image-4.png)
+
+---
+
+### Step 6: Replace the CDS Code
+
+Replace the generated content with the following, then save (`Cmd+S`) and activate (`Cmd+F3`).
+
+![ZRENDERPARAM open in Eclipse editor](image-5.png)
+
+```cds
 @EndUserText.label: 'zrenderparam'
 define abstract entity zrenderparam
 {
@@ -23,24 +78,34 @@ define abstract entity zrenderparam
     
 }
 ```
-Activate the abstract entity zrenderparam
 
-![alt text](image-8.png)
+---
 
+## Part 2: Create the Abstract Entity `ZPDF_CNT`
 
+`ZPDF_CNT` defines the result type of the `render` function: a single raw-string field that holds the rendered PDF bytes.
 
-### Step 2, Create abstract entity for render function result
+### Step 7: Create a Second Data Definition
 
-![alt text](image.png)
-![alt text](image-1.png)
-![alt text](image-6.png)
-![alt text](image-3.png)
-![alt text](image-4.png)
-![alt text](image-7.png)
+Repeat Steps 1–5 with the following name, again selecting the **Define Abstract Entity with Parameters** template.
 
-Adjust the abstract entity zpdf_cnt with the following code:
+![New Data Definition — name zpdf_cnt](image-6.png)
 
-```
+| Field | Value |
+|-------|-------|
+| Package | `ZLABELPRINT` |
+| Name | `zpdf_cnt` |
+| Description | `zpdf_cnt` |
+
+---
+
+### Step 8: Replace the CDS Code
+
+Replace the generated content with the following, then save and activate.
+
+![ZPDF_CNT open in Eclipse editor](image-7.png)
+
+```cds
 @EndUserText.label: 'zpdf_cnt'
 define abstract entity zpdf_cnt
 {
@@ -48,21 +113,42 @@ define abstract entity zpdf_cnt
     
 }
 ```
-Activate the abstract entity zpdf_cnt
 
-![alt text](image-9.png)
+---
 
-### Step 3, Create behavior definition for data definition ZOBJ_DN
-![alt text](image-10.png)
-![alt text](image-11.png)
+## Part 3: Create the Behavior Definition and Implementation
 
-Click Next until finish.
+### Step 9: Open the New Behavior Definition Wizard
 
-![alt text](image-12.png)
+In the **Project Explorer**, right-click `ZOBJ_DN` under **Core Data Services → Data Definitions** and choose **New → New Behavior Definition**.
 
-Adjust the behavior definition like the following code:
+![Right-click ZOBJ_DN → New → New Behavior Definition](image-10.png)
 
-```
+---
+
+### Step 10: Enter the Behavior Definition Details
+
+The wizard pre-fills **Root Entity** with `ZOBJ_DN`. Set the **Implementation Type** to `Unmanaged` and click **Next**, then proceed through the transport request page and click **Finish**.
+
+![New Behavior Definition — ZOBJ_DN, Unmanaged](image-11.png)
+
+| Field | Value |
+|-------|-------|
+| Package | `ZLABELPRINT` |
+| Name | `ZOBJ_DN` |
+| Description | `ZOBJ_DN` |
+| Root Entity | `ZOBJ_DN` |
+| Implementation Type | `Unmanaged` |
+
+---
+
+### Step 11: Replace the Behavior Definition Code
+
+Eclipse opens the behavior definition editor with a skeleton. Replace it with the following, then save.
+
+![Behavior definition ZOBJ_DN with render function](image-12.png)
+
+```abap
 unmanaged implementation in class zbp_obj_dn unique;
 
 define behavior for ZOBJ_DN //alias <alias_name>
@@ -89,14 +175,19 @@ define behavior for ZOBJ_DN_ITEMS //alias <alias_name>
   function render1 parameter zrenderparam  result [1] zpdf_cnt ;
 //  association _headers;
 }
-
 ```
 
-![alt text](image-13.png)
+> The `function render1` line declares the `render` action on `ZOBJ_DN_ITEMS`. It takes `ZRENDERPARAM` as input and returns a single `ZPDF_CNT` result.
 
+---
 
-```
+### Step 12: Replace the Behavior Implementation Code
 
+Eclipse also opens the behavior implementation class `ZBP_OBJ_DN`. Replace its entire content with the following, then save.
+
+![ZBP_OBJ_DN implementation with render method](image-13.png)
+
+```abap
 CLASS lhc_ZOBJ_DN DEFINITION INHERITING FROM cl_abap_behavior_handler.
   PRIVATE SECTION.
 
@@ -257,26 +348,37 @@ CLASS lsc_ZOBJ_DN IMPLEMENTATION.
   ENDMETHOD.
 
 ENDCLASS.
-
 ```
 
-Activate Behavior Definition.
+---
 
-![alt text](image-14.png)
+### Step 13: Activate Both Objects
 
-![alt text](image-15.png)
+Right-click `ZOBJ_DN` in the Project Explorer and choose **Activate**, or press `Cmd+F3`. Eclipse will prompt you to save both `ZBP_OBJ_DN` and `ZOBJ_DN` before activating — make sure both are checked and click **OK**.
 
+![Activate — right-click ZOBJ_DN](image-14.png)
 
+![Save before activation — select both ZBP_OBJ_DN and ZOBJ_DN](image-15.png)
 
+Both objects must activate without errors before you proceed.
 
+---
 
+## How the `render` Method Works
 
+When the user clicks the **Render** button in the Fiori app, the RAP framework calls `lhc_ZOBJ_DN_ITEMS~render` with the selected delivery item key and the parameters from the dialog. The method:
 
+1. **Builds the XML data payload** — a `<form1><LabelForm>` structure containing the delivery ID, position, material number, package, and quantity.
+2. **Fetches the XDP template** — calls `ZCL_FP_TMPL_STORE_CLIENT` (via `SAP_COM_0276`) to download the `PrintLabel` template from the `labelprint` form in the Forms Template Store.
+3. **Renders the PDF** — passes the XML data and XDP template to `cl_fp_ads_util=>render_4_pq`, which calls the SAP Forms Service by Adobe (`SAP_COM_0503`) and returns the rendered PDF bytes.
+4. **Queues the print job** — calls `cl_print_queue_utils=>create_queue_item_by_data` to push the PDF to `PRINT_QUEUE`.
 
+> Set `trace_level = 0` when deploying to production (currently `4` for debugging).
 
+---
 
+## Result
 
+The behavior definition `ZOBJ_DN` and implementation class `ZBP_OBJ_DN` are now active in package `ZLABELPRINT`. The `render` action is available on `ZOBJ_DN_ITEMS` and is wired to the Forms Service by Adobe pipeline.
 
-
-
-
+In **Exercise 12**, you will create the service definition `ZSRV_DN` and a UI service binding to expose `ZOBJ_DN` and `ZOBJ_DN_ITEMS` as an OData V4 service for the Fiori Elements app.
